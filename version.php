@@ -28,3 +28,4 @@ $plugin->component = 'qformat_printout';
 $plugin->version   = 2019021500;
 $plugin->requires  = 2011120511;
 $plugin->maturity  = MATURITY_STABLE;
+$plugin->release   = "v1.0";
