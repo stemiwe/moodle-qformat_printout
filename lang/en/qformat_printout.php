@@ -24,6 +24,6 @@
 
 $string['pluginname'] = 'Print out for review';
 $string['notsupported'] = 'This question type is not supported';
-$string['pluginname_help'] = 'Exports the questions including all answers for printout';
+$string['pluginname_help'] = 'Exports the questions including all answers for printout. Will strip html from texts.';
 $string['pluginname_link'] = 'qformat/printout';
 $string['privacy:metadata'] = 'The Print out question format plugin does not store any personal data.';
