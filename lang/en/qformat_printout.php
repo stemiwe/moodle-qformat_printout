@@ -18,7 +18,7 @@
  * Strings for component 'qformat_printout', language 'en', branch 'MOODLE_20_STABLE'
  *
  * @package    qformat_printout
- * @copyright  2010 Helen Foster
+ * @copyright  2018 Stefan Weber (webers@technikum-wien.at)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
