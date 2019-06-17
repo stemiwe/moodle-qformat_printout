@@ -157,6 +157,12 @@ defined('MOODLE_INTERNAL') || die();
             $expout .= "<br>";
         }
 
+        // Feedback
+        if ($question->generalfeedback) {
+          $expout .= get_string('feedback', 'question') . ": ";
+          $expout .= $question->generalfeedback;
+        }
+
         // Question type
         $expout .= "<p class=\"questiontype\">{$question->name} ";
         $expout .= " (" . get_string('pluginname', "qtype_{$question->qtype}");
