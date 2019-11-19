@@ -101,7 +101,11 @@ defined('MOODLE_INTERNAL') || die();
                     $questiontext = $subquestion->questiontext;
                     $answertext = $subquestion->answertext;
                     $answertext = strip_tags($answertext);
-                    $expout .= "<li>$questiontext-> <span class=\"correct\">$answertext</span></li>";
+                    if ($questiontext) {
+                        $expout .= "<li>$questiontext-> <span class=\"correct\">$answertext</span></li>";
+                    } else {
+                        $expout .= "<li><p>XXX</p>-> <span class=\"wrong\">$answertext</span></li>";
+                    }
                 }
                 $expout .= "</ul>";
                 break;
@@ -155,12 +159,6 @@ defined('MOODLE_INTERNAL') || die();
                   }
                 }
             $expout .= "<br>";
-        }
-
-        // Feedback
-        if ($question->generalfeedback) {
-          $expout .= get_string('feedback', 'question') . ": ";
-          $expout .= $question->generalfeedback;
         }
 
         // Question type
