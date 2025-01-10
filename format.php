@@ -72,7 +72,7 @@ class qformat_printout extends qformat_default {
         }
 
         // Print questions depends on question type.
-        $expout .= "<div>";
+        $expout = "<div>";
         switch($question->qtype) {
             case 'multichoice':
                 $expout .= $this->writetitle($question->questiontext);
@@ -163,18 +163,19 @@ class qformat_printout extends qformat_default {
                 break;
             default:
                 $expout .= $this->writetitle($question->questiontext);
-                if (count($question->options->answers) > 1) {
+                $answers = $question->options->answers ?? [];
+                if (count($answers) > 1) {
                     $expout .= "<ul>";
-                    foreach ($question->options->answers as $answer) {
+                    foreach ($answers as $answer) {
                         $expout .= "<li>". strip_tags($answer->answer) ."</li>";
                     }
                     $expout .= "</ul>";
                 } else {
-                    foreach ($question->options->answers as $answer) {
+                    foreach ($answers as $answer) {
                         $expout .= "<p>" . get_string('answer') . ": " . strip_tags($answer->answer) . "</p>";
                     }
                 }
-            $expout .= "<br>";
+                $expout .= "<br>";
         }
 
         // Feedback.
@@ -186,7 +187,8 @@ class qformat_printout extends qformat_default {
         // Question type.
         $expout .= "<p class=\"questiontype\">{$question->name} ";
         $expout .= " (" . get_string('pluginname', "qtype_{$question->qtype}");
-        if ($question->options->single) {
+
+        if (!empty($question->options->single)) {
             $expout .= " / " . get_string('answersingleyes', 'qtype_multichoice');
         }
         $expout .= ")</p>";
