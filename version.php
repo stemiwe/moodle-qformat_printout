@@ -18,14 +18,15 @@
  * Version information for printout question format.
  *
  * @package    qformat_printout
- * @copyright  2018 Stefan Weber (webers@technikum-wien.at)
+ * @copyright  2018 Stefan Weber (stewe1@gmx.de)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'qformat_printout';
-$plugin->release  = '1.04';
-$plugin->version   = 2023112301;
+$plugin->release   = '1.1';
+$plugin->version   = 2025071501;
 $plugin->requires  = 2011120511;
 $plugin->maturity  = MATURITY_STABLE;
+$plugin->supports  = [400, 405];

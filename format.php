@@ -18,7 +18,7 @@
  * printout question exporter.
  *
  * @package    qformat_printout
- * @copyright  2018 Stefan Weber (webers@technikum-wien.at)
+ * @copyright  2018 Stefan Weber (stewe1@gmx.de)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
